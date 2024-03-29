@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Welcome to MyReactApp"
-cd ../
+cd ../../
 echo "Stashing un-pushed changes"
 git reset --soft HEAD~
 git stash pop
@@ -13,7 +13,8 @@ then
   echo "ERROR: During pull from GitFarm. Exiting"
   exit 1
 fi
-
+echo "Instaling if new packages"
+npm install
 echo "Cleaning build directory"
 rm -rf dist/*
 
